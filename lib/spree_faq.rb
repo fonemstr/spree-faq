@@ -1,5 +1,4 @@
 require 'spree_core'
-require 'spree_faq_hooks'
 
 module SpreeFaq
   class Engine < Rails::Engine
