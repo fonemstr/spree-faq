@@ -30,16 +30,4 @@
   <% end %>
 <% end %>
 
-<%= content_for :head do %>  
-  <%= stylesheet_link_tag 'spree_faq' %>
-  <%= javascript_tag do %>
-    $(function() {
-      $('.answer').hide();
-      $('.question').click(function() {
-        var id = $(this).attr('id').split('_')[1];
-        $('#answer_' + id).slideToggle();  
-        return false;
-      });
-    });
-  <% end %>
 <% end %>
