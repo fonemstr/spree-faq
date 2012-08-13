@@ -1,5 +1,5 @@
-class Admin::QuestionCategoriesController < Admin::BaseController
-  resource_controller
+class Admin::QuestionCategoriesController < Admin::ResourceController
+  #resource_controller
 
   helper 'spree/base'
 
