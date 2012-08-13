@@ -1,5 +1,5 @@
-  Module Spree
-    Module Admin
+module Spree
+    module Admin
       class QuestionCategoriesController < ResourceController
         helper 'spree/base'
 
@@ -14,6 +14,7 @@
         create.response do |format|
           format.html { redirect_to edit_admin_question_category_path(@question_category) }
         end
+      
       end
     end
   end
