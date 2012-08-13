@@ -1,4 +1,4 @@
-class QuestionCategory < ActiveRecord::Base
+class Spree::QuestionCategory < ActiveRecord::Base
   acts_as_list 
 
   has_many :questions
