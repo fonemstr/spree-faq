@@ -1,4 +1,4 @@
-class Question < ActiveRecord::Base
+class Spree::Question < ActiveRecord::Base
   belongs_to :question_category
   acts_as_list 
 
