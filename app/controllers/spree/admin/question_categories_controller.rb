@@ -1,6 +1,14 @@
 module Spree
     module Admin
       class QuestionCategoriesController < ResourceController
+
+        def new
+          @page = @object
+        end
+
+        def edit
+          @page = @object
+        end
         # helper 'spree/base'
 
         # new_action.response do |format|
