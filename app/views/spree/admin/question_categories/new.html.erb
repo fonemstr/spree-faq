@@ -1,11 +1,19 @@
-<%= form_for @question_category, :url => collection_path do |f| %>
-  <%= render "shared/error_messages", :target => f.object %>
-  <fieldset>
+<%= render :partial => 'spree/admin/shared/configuration_menu' %>
+
+<% content_for :page_title do %>
+  <%= t(:new_question_categories) %>
+<% end %>
+
+<%= render :partial => 'spree/shared/error_messages', :locals => { :target => @question_category} %>
+<%= form_for [:admin, @question_category] do |f| %>
+  <fieldset class="no-border-top">
       <%= f.field_container :name do %>
           <%= f.label :name, t("name") %> <span class="required">*</span><br />
           <%= f.text_field :name, :class => 'fullwidth title'  %>  
           <%= f.error_message_on :name %>
       <% end %>
-      <%= render :partial => 'admin/shared/new_resource_links' %>
+      <div data-hook="buttons" class="filter-actions actions">
+      	<%= button t(:create), 'icon-ok' %>
+    	</div>
   </fieldset>
 <% end %>

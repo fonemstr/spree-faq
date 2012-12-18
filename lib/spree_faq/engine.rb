@@ -1,7 +1,6 @@
-require "spree_faq"
-
 module SpreeFaq
   class Engine < Rails::Engine
+    isolate_namespace Spree
     engine_name 'spree_faq'
     
     def self.activate

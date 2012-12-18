@@ -4,6 +4,8 @@ en:
   question_categories_admin: FAQ
   question_categories: Frequently Asked Questions
   new_question_category: New Category
+  back_to_categories: Back to Categories
+  editing_category_questions: Editing Category Questions
   questions: Questions
   create_category: Create Category
   category_name: Category Name
