@@ -17,7 +17,8 @@ module SpreeFaq
       
       def add_javascripts
         append_file 'app/assets/javascripts/store/all.js', "//= require store/spree_faq\n"
-        append_file 'app/assets/javascripts/store/all.js', "//= require store/jquery.scrollTo-min\n"
+        append_file 'app/assets/javascripts/admin/all.js', "//= require admin/jquery.scrollTo-min\n"
+        append_file 'app/assets/javascripts/admin/all.js', "//= require admin/spree_faq\n"
       end
 
       def add_stylesheets

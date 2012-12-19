@@ -16,17 +16,6 @@
 <%= form_for [:admin, @question_category] do |f| %>
   <%= javascript_tag do %>
      var new_question_html = '<%= generate_template(f, :questions) %>';
-
-     jQuery(document).ready(function($) {
-        $('#new_question_link').click(function() {
-          $('#questions').append(new_question_html.replace(/NEW_RECORD/g, $('#questions .question').size()));
-          $('#questions .question:last .remove').click(function() {
-            $(this).parent('.question').remove();
-          });
-          $.scrollTo(jQuery('#questions .question:last'), 800);
-          $('.question:last input:first').focus();
-        });
-     });
   <% end %>
   <div class="field">
     <%= f.field_container :name do %>
