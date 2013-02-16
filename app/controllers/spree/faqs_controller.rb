@@ -1,5 +1,5 @@
 module Spree
-	class FaqsController < Spree::BaseController
+	class FaqsController < Spree::StoreController
 	  helper 'spree/products'
 
 	  def index
