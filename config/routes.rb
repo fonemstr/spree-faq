@@ -4,6 +4,6 @@ Spree::Core::Engine.routes.prepend do
     resources :questions
   end
   
-  get :faq, :to => 'faqs#index', :as => 'faq'
+  get :faq, :to => 'faqs#index' #, :as => 'faq'
 
 end
