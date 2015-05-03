@@ -1,0 +1,5 @@
+<% if can? :admin, Spree::QuestionCategories %>
+    <ul class="nav nav-sidebar">
+    <%= tab Spree::QuestionCategories, url: spree.admin_question_categories_url, icon: 'question-sign', label: plural_resource_name(Spree::QuestionCategories) %>
+  </ul>
+<% end %>
