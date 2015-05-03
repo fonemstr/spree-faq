@@ -1,14 +1,10 @@
-<%= render :partial => 'spree/admin/shared/configuration_menu' %>
-
 <% content_for :page_title do %>
   <%= t(:editing_category_questions) %>
 <% end %>
 
 <% content_for :page_actions do %>
-  <li>
-    <%= button_link_to t(:add_question), "#", :icon => 'icon-plus', :id => 'new_question_link' %>
-    <%= button_link_to t(:back_to_categories), spree.admin_question_categories_path, :icon => 'icon-arrow-left' %>
-  </li>
+  <%= button_link_to t(:add_question), "#", :class => "btn-success", :icon => 'add', :id => 'new_question_link' %>
+<%= button_link_to t(:back_to_categories), collection_url, :class => 'btn-primary', :icon => 'arrow-left' %>
 <% end %>
 
 <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @question_category } %>
@@ -17,10 +13,10 @@
   <%= javascript_tag do %>
      var new_question_html = '<%= generate_template(f, :questions) %>';
   <% end %>
-  <div class="field">
+  <div class="field-group">
     <%= f.field_container :name do %>
       <%= f.label :name, t("category_name") %> <span class="required">*</span><br />
-      <%= f.text_field :name, :class => 'fullwidth title'  %>  
+      <%= f.text_field :name, :class => 'form-control'  %>  
       <%= f.error_message_on :name %>
     <% end %>
   </div>

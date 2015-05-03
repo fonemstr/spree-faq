@@ -1,14 +1,12 @@
 <div class="question" id="<%= dom_id f.object %>">
-	<fieldset class="no-border-bottom">
-	  <div class="field">
+	  <div class="form-group">
 	    <%= f.label :question, t("question") %> <span class="required">*</span><br />
-	    <%= f.text_field :question, :class => 'fullwidth title'  %>  
+	    <%= f.text_field :question, :class => 'form-control'  %>  
 	  </div>
-	  <div class="field">
+	  <div class="form-group">
 	    <%= f.label :answer, t("answer") %> <span class="required">*</span><br />
-	    <%= f.text_area :answer, :rows => 2, :class => 'fullwidth' %>  
+	    <%= f.text_area :answer, :rows => 2, :class => 'form-control' %>  
 	  </div>
-	  <%= f.hidden_field :_destroy %>
-	  <%= link_to_with_icon 'icon-trash', "remove", "#", :class => "remove" %>
-  </fieldset>
+      <%= f.hidden_field :_destroy %>
+      <%= link_to_with_icon 'delete', "remove", "#", :class => "remove" %>
 </div>
